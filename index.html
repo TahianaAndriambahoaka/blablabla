@@ -20,7 +20,7 @@
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-  $http.get("http://localhost:8072/api/v1/employees")
+  $http.get("https://webservice-app-heroku.herokuapp.com/api/v1/employees")
   .then(function(response) {
       $scope.myWelcome = response.data;
   });
